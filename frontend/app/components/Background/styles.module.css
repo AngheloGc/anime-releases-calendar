@@ -1,0 +1,39 @@
+@-webkit-keyframes background-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes background-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.background_wrapper {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: var(--max-width);
+  max-width: var(--max-width);
+  height: 100vh;
+  filter: saturate(0);
+  box-shadow: 0 0 15rem 15rem var(--background-color) inset;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  animation: background-fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}

@@ -1,0 +1,42 @@
+@-webkit-keyframes title-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes title-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.title_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: title-fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 0.75s;
+}
+
+.title_h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.title_h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-color);
+}
