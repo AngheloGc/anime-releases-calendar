@@ -1,0 +1,82 @@
+.anidate_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.anidate_image {
+  width: 100%;
+  height: 10rem;
+  max-height: 10rem;
+  position: relative;
+  border-radius: 4px;
+}
+
+.anidate_image_mask {
+  position: absolute;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0.5rem;
+  background: linear-gradient(360deg,
+        rgba(0,0,0,0.92) 0%,
+        transparent 100%);
+}
+
+.anidate_image_mask_date {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.anidate_image_mask_date_weekday {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+
+.anidate_image_mask_date_month {
+  display: flex;
+  gap: 0.4rem;
+  color: white;
+}
+
+.anidate_image_mask_date_month_ordinal {
+  font-size: 1.2rem;
+}
+
+.anidate_names_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: disc outside none;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+.anidate_names_list_element {
+  padding-left: 0.15rem;
+}
+
+.anidate_names_list_element a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.anidate_names_list_element a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+.anidate_names_list_element::marker {
+  color: var(--main-color);
+}

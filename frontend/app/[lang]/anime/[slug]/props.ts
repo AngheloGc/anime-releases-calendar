@@ -5,3 +5,7 @@ export interface PageProps {
   }
 }
 
+export interface ErrorPageProps {
+  error: Error;
+  reset: () => void;
+}

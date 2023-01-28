@@ -1,3 +1,6 @@
+import { Period } from 'types';
+
 export interface Props {
-  currentSeason: string
+  label: string;
+  seasons: Record<Period, string>;
 }

@@ -1,0 +1,1 @@
+export type Period = 'spring' | 'summer' | 'fall' | 'winter'

@@ -6,9 +6,12 @@ import { Ubuntu } from '@next/font/google';
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '400' });
 
-export default function DashboardLayout({ children }: DashboardLayoutProps) {
+export default function DashboardLayout({
+  children,
+  params,
+}: DashboardLayoutProps) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={ubuntu.className}>
         <section>{children}</section>
       </body>

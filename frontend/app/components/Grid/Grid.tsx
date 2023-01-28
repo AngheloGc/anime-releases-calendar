@@ -1,24 +1,24 @@
-import Image from 'next/image';
 import { getCurrentSeason, getSeasonData } from 'services';
-import { Row } from '../Row';
+import { AniDate } from '../AniDate';
+import { sortAnimesByDate } from './helpers';
+import { Props } from './props';
 import styles from './styles.module.css';
 
-export const Grid = async () => {
+export const Grid = async (props: Props) => {
+  const { lang } = props;
   const { id: seasonId } = await getCurrentSeason();
   const { animes } = await getSeasonData(seasonId);
+  const sortedAnimesByDate = sortAnimesByDate(animes);
+
   return (
     <div className={styles.grid_wrapper}>
-      {animes.map((anime) => (
-        <div key={anime.id}>
-          <Image
-            src={anime.coverImageURL}
-            alt={anime.title}
-            width={150}
-            height={150}
-            style={{ objectFit: 'cover', borderRadius: '4px' }}
-          />
-          <p>{anime.title}</p>
-        </div>
+      {sortedAnimesByDate.map((aniDate) => (
+        <AniDate
+          key={aniDate.id}
+          releaseDate={aniDate.releaseDate}
+          animes={aniDate.animes}
+          lang={lang}
+        />
       ))}
     </div>
   );
